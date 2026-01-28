@@ -2,69 +2,104 @@ export default function Gallery() {
     const videos = [
         {
             id: 1,
-            title: "Spring Session 2024",
-            description: "Highlights from our spring skate sessions at the campus park"
+            title: "SPRING SESSIONS 2024",
+            description: "Best clips from spring term. Rails, stairs, and street spots."
         },
         {
             id: 2,
-            title: "Kickflip Compilation",
-            description: "Club members landing their best kickflips"
+            title: "KICKFLIP MONTAGE",
+            description: "Everyone's favorite trick. 50+ kickflips in 3 minutes."
         },
         {
             id: 3,
-            title: "Downtown Street Skating",
-            description: "Exploring downtown Waterloo's best spots"
+            title: "DOWNTOWN WATERLOO",
+            description: "Hitting every spot in downtown. Security kicked us out twice."
         },
         {
             id: 4,
-            title: "Beginner Workshop",
-            description: "Teaching the fundamentals to new skaters"
+            title: "BEGINNER SESSIONS",
+            description: "New skaters learning the basics. Everyone starts somewhere."
         },
         {
             id: 5,
-            title: "Summer Skate Trip",
-            description: "Road trip to Toronto's iconic skate parks"
+            title: "TORONTO TRIP",
+            description: "Road trip to T.O. Christie Pits, Ashbridges, and street missions."
         },
         {
             id: 6,
-            title: "Night Session",
-            description: "Late night skating under the lights"
+            title: "NIGHT SESSIONS",
+            description: "After dark skating. Empty parks, good vibes, sketchy lighting."
+        },
+        {
+            id: 7,
+            title: "HALL OF MEAT",
+            description: "The slams. The bails. The pain. Skateboarding hurts."
+        },
+        {
+            id: 8,
+            title: "BEST TRICK CONTEST",
+            description: "Winner takes all. 10 tries to land your gnarliest trick."
+        },
+        {
+            id: 9,
+            title: "CAMPUS SPOTS",
+            description: "Skating UW campus. Ledges, gaps, and dodging campus police."
         }
     ];
 
     return (
         <main>
-            <div className="container">
-                <div className="hero">
-                    <h1>Gallery</h1>
-                    <p>Clips, videos, and moments from our sessions</p>
+            <div className="hero">
+                <div className="container">
+                    <h1>GALLERY</h1>
+                    <p>VIDEOS, CLIPS, AND CARNAGE</p>
                 </div>
+            </div>
 
-                <div className="content-section">
-                    <h2>Featured Videos</h2>
+            <div className="content-section">
+                <div className="container">
+                    <h2>VIDEO ARCHIVE</h2>
                     <p>
-                        Check out our latest clips and session highlights. We're constantly filming and documenting
-                        the progression of our members. Got footage to share? Tag us on social media!
+                        Every session filmed. Every trick documented. This is our video vault—clips from sessions,
+                        contests, trips, and everything in between. New videos drop regularly, so check back often.
                     </p>
                 </div>
+            </div>
 
-                <div className="gallery-grid">
-                    {videos.map((video) => (
-                        <div key={video.id} className="gallery-item">
-                            <div className="video-placeholder">
-                                <span>▶</span>
-                            </div>
-                            <h3>{video.title}</h3>
-                            <p>{video.description}</p>
+            <div className="gallery-grid">
+                {videos.map((video) => (
+                    <div key={video.id} className="gallery-item">
+                        <div className="video-placeholder">
+                            <span>▶</span>
                         </div>
-                    ))}
-                </div>
+                        <h3>{video.title}</h3>
+                        <p>{video.description}</p>
+                    </div>
+                ))}
+            </div>
 
-                <div className="content-section" style={{ marginTop: '3rem' }}>
-                    <h2>Submit Your Clips</h2>
+            <div className="red-line"></div>
+
+            <div className="content-section">
+                <div className="container">
+                    <h2>SUBMIT CLIPS</h2>
                     <p>
-                        Landed something sick? We want to see it! Send us your best clips and they might be featured
-                        in our next compilation video. Follow us on Instagram and tag @uwskateclub in your posts.
+                        Got footage? Send it our way. Tag <span className="text-highlight">@uwskateclub</span> on Instagram
+                        or DM us your clips. If it's good, we'll put it in the next video.
+                    </p>
+                    <p>
+                        Film in landscape. Keep it raw. No filters, no slow-mo (unless it's a gnarly slam).
+                        Just skateboarding.
+                    </p>
+                </div>
+            </div>
+
+            <div className="content-section">
+                <div className="container">
+                    <h2>PHOTOGRAPHERS & FILMERS</h2>
+                    <p>
+                        Shoutout to everyone behind the lens. You make this possible. If you shoot photos or film,
+                        come session with us. We need more people documenting the scene.
                     </p>
                 </div>
             </div>

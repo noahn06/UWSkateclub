@@ -1,50 +1,86 @@
 export default function About() {
     return (
         <main>
-            <div className="container">
-                <div className="hero">
-                    <h1>About Us</h1>
-                    <p>Building a skateboarding community at UW</p>
+            <div className="hero">
+                <div className="container">
+                    <h1>ABOUT</h1>
+                    <p>WHO WE ARE AND WHAT WE'RE ABOUT</p>
                 </div>
+            </div>
 
-                <div className="content-section">
-                    <h2>Our Story</h2>
+            <div className="content-section">
+                <div className="container">
+                    <h2>THE CREW</h2>
                     <p>
-                        Founded by passionate skaters who wanted to create a space where students could connect through
-                        skateboarding, UW Skateclub has grown into one of the most active communities on campus.
+                        Started by a handful of skaters who were tired of skating alone, <span className="text-highlight">UW SKATECLUB</span> has
+                        become the go-to for anyone at Waterloo who actually skates. We're not some corporate-sponsored
+                        team or a bunch of mall-grabbers. We're real skaters building a real scene.
                     </p>
                     <p>
-                        We believe skateboarding is more than just a sport – it's a form of self-expression, a way to
-                        challenge yourself, and a path to building lasting friendships. Our club welcomes everyone,
-                        from complete beginners to seasoned pros.
-                    </p>
-                </div>
-
-                <div className="content-section">
-                    <h2>Our Mission</h2>
-                    <p>
-                        To foster a supportive and inclusive skateboarding community at the University of Waterloo.
-                        We're committed to:
-                    </p>
-                    <p>
-                        • Creating safe spaces for skaters to practice and progress<br />
-                        • Organizing events that bring the community together<br />
-                        • Supporting local skate culture and businesses<br />
-                        • Promoting skateboarding as a healthy and creative outlet<br />
-                        • Building connections that last beyond university
+                        Whether you've been skating for 10 years or just bought your first board, you're one of us.
+                        We don't care about your Instagram followers or how many sponsors you have. Can you push?
+                        Can you have fun? That's all that matters.
                     </p>
                 </div>
+            </div>
 
-                <div className="content-section">
-                    <h2>Get Involved</h2>
+            <div className="red-line"></div>
+
+            <div className="content-section">
+                <div className="container">
+                    <h2>OUR PHILOSOPHY</h2>
+
+                    <div className="feature-box">
+                        <h3>SKATEBOARDING IS NOT A CRIME</h3>
+                        <p>
+                            We skate where we want, when we want. Respect the spots, respect the locals, but don't
+                            let anyone tell you where you can't roll. Skateboarding is freedom.
+                        </p>
+                    </div>
+
+                    <div className="feature-box">
+                        <h3>PROGRESSION OVER PERFECTION</h3>
+                        <p>
+                            Nobody lands everything first try. We celebrate the slams as much as the makes.
+                            Every session is about getting better, pushing yourself, and having fun doing it.
+                        </p>
+                    </div>
+
+                    <div className="feature-box">
+                        <h3>CREW OVER EVERYTHING</h3>
+                        <p>
+                            Your board might break, your shoes will wear out, but the friendships you make skating
+                            last forever. We look out for each other—on and off the board.
+                        </p>
+                    </div>
+
+                    <div className="feature-box">
+                        <h3>KEEP IT REAL</h3>
+                        <p>
+                            No fake hype, no clout chasing. Just skateboarding. We're here to skate, film, and
+                            build something authentic. Everything else is just noise.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div className="red-line"></div>
+
+            <div className="content-section">
+                <div className="container">
+                    <h2>GET INVOLVED</h2>
                     <p>
-                        Interested in joining? We meet every week during the academic term. Follow us on social media
-                        for updates on sessions, events, and more. All skill levels are welcome – just bring your board
-                        and a positive attitude!
+                        Want to be part of the crew? It's simple:
                     </p>
-                    <p>
-                        Want to help organize events or have ideas for the club? We're always looking for passionate
-                        members to join our executive team. Reach out to us to learn more.
+                    <ul className="skate-list">
+                        <li>Follow us on Instagram <span className="text-highlight">@uwskateclub</span></li>
+                        <li>Show up to sessions (posted weekly on our story)</li>
+                        <li>Bring your board and a good attitude</li>
+                        <li>Skate, film, have fun, repeat</li>
+                    </ul>
+                    <p style={{ marginTop: '30px' }}>
+                        If you want to help run events, organize trips, or film/edit videos, hit us up in the DMs.
+                        We're always looking for motivated people who want to give back to the scene.
                     </p>
                 </div>
             </div>

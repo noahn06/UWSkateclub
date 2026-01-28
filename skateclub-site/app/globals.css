@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Oswald:wght@400;500;600;700&family=Roboto+Condensed:wght@400;700&display=swap');
 
 * {
   margin: 0;
@@ -7,208 +7,316 @@
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
   background-color: #000000;
   color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  line-height: 1.6;
+  line-height: 1.4;
+  overflow-x: hidden;
 }
 
-/* Main container - centered with max width */
-.container {
-  max-width: 1000px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 2rem;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Navigation styles */
+/* Header/Nav - Thrasher style */
 nav {
-  padding: 2rem 0;
-  border-bottom: 1px solid #333;
+  background-color: #000;
+  border-bottom: 3px solid #ff0000;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 100%;
+  padding: 0;
+}
+
+.nav-logo {
+  text-align: center;
+  padding: 20px 0 10px 0;
+  background: #000;
+}
+
+.nav-logo h1 {
+  font-family: 'Anton', 'Impact', sans-serif;
+  font-size: 3.5rem;
+  letter-spacing: 0.1em;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 900;
+  text-shadow: 3px 3px 0px #ff0000;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 2rem;
   justify-content: center;
+  background: #ff0000;
+  margin: 0;
+  padding: 0;
   flex-wrap: wrap;
 }
 
-nav a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
-  position: relative;
-  padding: 0.5rem 0;
+nav li {
+  margin: 0;
 }
 
-nav a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #00ff88, #00ccff);
-  transition: width 0.3s ease;
+nav a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 12px 25px;
+  transition: all 0.2s;
+  border-right: 1px solid #cc0000;
 }
 
 nav a:hover {
-  color: #00ff88;
+  background: #000;
+  color: #ff0000;
 }
 
-nav a:hover::after {
-  width: 100%;
-}
-
-/* Main content area */
+/* Main content */
 main {
-  flex: 1;
-  padding: 3rem 0;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0;
 }
 
-/* Hero section */
+.container {
+  padding: 0 20px;
+}
+
+/* Hero - Bold and in your face */
 .hero {
-  text-align: center;
-  padding: 4rem 0;
-  animation: fadeIn 1s ease-in;
+  padding: 60px 20px 40px 20px;
+  text-align: left;
+  border-bottom: 2px solid #333;
+  background: linear-gradient(180deg, #000 0%, #0a0a0a 100%);
 }
 
 .hero h1 {
-  font-size: 4rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  background: linear-gradient(135deg, #ffffff 0%, #00ff88 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-family: 'Bebas Neue', 'Impact', sans-serif;
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+  line-height: 0.9;
+  color: #fff;
 }
 
 .hero p {
-  font-size: 1.5rem;
-  color: #cccccc;
-  font-weight: 300;
+  font-size: 1.3rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  margin: 0;
 }
 
 /* Content sections */
 .content-section {
-  margin: 3rem 0;
-  animation: slideUp 0.8s ease-out;
+  padding: 40px 20px;
+  border-bottom: 1px solid #222;
 }
 
 .content-section h2 {
+  font-family: 'Oswald', sans-serif;
   font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  color: #00ff88;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  color: #ff0000;
+  border-left: 5px solid #ff0000;
+  padding-left: 15px;
 }
 
 .content-section p {
   font-size: 1.1rem;
-  line-height: 1.8;
-  color: #e0e0e0;
-  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: #ccc;
+  margin-bottom: 15px;
+  max-width: 900px;
 }
 
-/* Gallery grid */
+/* Gallery grid - Magazine style */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 0;
+  margin: 30px 0;
 }
 
 .gallery-item {
-  background: #111;
-  border: 1px solid #333;
-  border-radius: 12px;
-  padding: 2rem;
-  transition: all 0.3s ease;
-  cursor: pointer;
+  background: #0a0a0a;
+  border: 1px solid #222;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
 }
 
 .gallery-item:hover {
-  transform: translateY(-5px);
-  border-color: #00ff88;
-  box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2);
+  border-color: #ff0000;
+  transform: scale(1.02);
+  z-index: 10;
 }
 
 .gallery-item h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #00ccff;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.4rem;
+  padding: 15px;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: #000;
+  color: #fff;
+  font-weight: 600;
 }
 
 .gallery-item p {
-  color: #999;
+  padding: 0 15px 15px 15px;
+  color: #888;
+  font-size: 0.95rem;
+  margin: 0;
 }
 
-/* Video placeholder */
+/* Video placeholder - Raw style */
 .video-placeholder {
   width: 100%;
   aspect-ratio: 16/9;
-  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-  border-radius: 12px;
+  background: #111;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
-  border: 2px solid #333;
-  transition: all 0.3s ease;
+  position: relative;
+  border-bottom: 2px solid #ff0000;
 }
 
-.video-placeholder:hover {
-  border-color: #00ff88;
+.video-placeholder::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    repeating-linear-gradient(0deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 0, 0, 0.03) 2px,
+      rgba(255, 0, 0, 0.03) 4px);
+  pointer-events: none;
 }
 
 .video-placeholder span {
-  font-size: 3rem;
-  color: #444;
+  font-size: 4rem;
+  color: #333;
+  z-index: 1;
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.video-placeholder:hover span {
+  color: #ff0000;
 }
 
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Feature boxes */
+.feature-box {
+  background: #0a0a0a;
+  border: 2px solid #222;
+  padding: 30px;
+  margin: 20px 0;
+  position: relative;
+}
+
+.feature-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: #ff0000;
+}
+
+.feature-box h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  letter-spacing: 0.05em;
+}
+
+/* Lists */
+ul.skate-list {
+  list-style: none;
+  padding: 0;
+}
+
+ul.skate-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #222;
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+ul.skate-list li::before {
+  content: '▸';
+  color: #ff0000;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Accent elements */
+.red-line {
+  height: 3px;
+  background: #ff0000;
+  margin: 30px 0;
+  width: 100%;
+}
+
+.text-highlight {
+  color: #ff0000;
+  font-weight: 700;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .hero h1 {
+  .nav-logo h1 {
     font-size: 2.5rem;
   }
-  
+
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
   .hero p {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
-  
-  nav ul {
-    gap: 1rem;
+
+  nav a {
+    padding: 10px 15px;
+    font-size: 0.85rem;
   }
-  
-  .container {
-    padding: 0 1rem;
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .content-section h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-logo h1 {
+    font-size: 2rem;
+    text-shadow: 2px 2px 0px #ff0000;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
   }
 }
